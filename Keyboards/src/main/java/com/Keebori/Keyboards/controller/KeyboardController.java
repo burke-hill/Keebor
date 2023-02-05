@@ -27,9 +27,9 @@ public class KeyboardController
     }
 
 
-    @GetMapping(path="")
-    public void helloWorld() throws IOException
+    @GetMapping(path="/test")
+    public @ResponseBody String helloWorld() throws IOException
     {
-       // caseService.addCase();
+        return "Hello world!";
     }
 }
