@@ -14,6 +14,8 @@ public class Case {
     private String color;
     private String material;
 
+    public Long getId() {return id; }
+
     public String getName() {
         return name;
     }

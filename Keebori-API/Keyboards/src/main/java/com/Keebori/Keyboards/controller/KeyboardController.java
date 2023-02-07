@@ -2,6 +2,7 @@ package com.Keebori.Keyboards.controller;
 
 
 import com.Keebori.Keyboards.model.Case;
+import com.Keebori.Keyboards.model.Keyboard;
 import com.Keebori.Keyboards.service.CaseService;
 import com.Keebori.Keyboards.service.KeyboardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +29,8 @@ public class KeyboardController
 
 
     @GetMapping(path="/test")
-    public @ResponseBody String helloWorld() throws IOException
+    public void helloWorld() throws IOException
     {
-        return "Hello world!";
+        keyboardService.testKeyboard();
     }
 }

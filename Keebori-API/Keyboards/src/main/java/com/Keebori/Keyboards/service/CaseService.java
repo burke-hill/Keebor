@@ -15,4 +15,9 @@ public class CaseService {
     {
         return caseRepository.findByName(name);
     }
+
+    public void saveCase(Case caseTest)
+    {
+        caseRepository.save(caseTest);
+    }
 }
