@@ -11,20 +11,28 @@ public class Keyboard {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Case caseChoice;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Switch switchChoice;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Pcb pcbChoice;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Keycaps keycapChoice;
 
     @Column(unique=true)
     private String Username;
+
+    public String getUsername() {
+        return Username;
+    }
+
+    public void setUsername(String username) {
+        Username = username;
+    }
 
     public Long getId() {
         return id;

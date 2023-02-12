@@ -59,6 +59,7 @@
 	<modules>
 		<module>bundle</module>
 		<module>Keyboards</module>
+		<module>forum</module>
 	</modules>
 
 </project>

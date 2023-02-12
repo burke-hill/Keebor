@@ -13,6 +13,7 @@ public class Case {
     private String name;
     private String color;
     private String material;
+    private Integer size;
 
     public Long getId() {return id; }
 

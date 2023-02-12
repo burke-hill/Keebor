@@ -1,7 +1,6 @@
 package com.Keebori.Keyboards.controller;
 
 
-import com.Keebori.Keyboards.model.Case;
 import com.Keebori.Keyboards.model.Keyboard;
 import com.Keebori.Keyboards.service.CaseService;
 import com.Keebori.Keyboards.service.KeyboardService;
@@ -32,5 +31,11 @@ public class KeyboardController
     public void helloWorld() throws IOException
     {
         keyboardService.testKeyboard();
+    }
+
+    @GetMapping(path="/all")
+    public @ResponseBody Iterable<Keyboard> findKeyboard() throws IOException
+    {
+        return keyboardService.findAllKeyboards();
     }
 }

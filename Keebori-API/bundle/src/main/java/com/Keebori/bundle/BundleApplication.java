@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {
-		"com.Keebori.Keyboards"
+		"com.Keebori.Keyboards",
 })
 public class BundleApplication {
 

@@ -13,11 +13,6 @@ public class Keycaps {
     private String color;
     private String material;
 
-    public Keycaps(String name, String color, String material) {
-        this.name = name;
-        this.color = color;
-        this.material = material;
-    }
 
     public String getName() {
         return name;

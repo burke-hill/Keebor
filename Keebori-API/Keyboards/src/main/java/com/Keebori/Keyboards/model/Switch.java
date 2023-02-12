@@ -11,12 +11,14 @@ public class Switch {
     private Long id;
     private String name;
     private String color;
-    private String material;
+    private String type;
 
-    public Switch(String name, String color, String material) {
-        this.name = name;
-        this.color = color;
-        this.material = material;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -35,11 +37,11 @@ public class Switch {
         this.color = color;
     }
 
-    public String getMaterial() {
-        return material;
+    public String getType() {
+        return type;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setType(String type) {
+        this.type = type;
     }
 }

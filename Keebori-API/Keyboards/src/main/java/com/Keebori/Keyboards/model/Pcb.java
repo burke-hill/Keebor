@@ -10,13 +10,15 @@ public class Pcb {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String color;
-    private String material;
+    private boolean hotswap;
+    private Integer size;
 
-    public Pcb(String name, String color, String material) {
-        this.name = name;
-        this.color = color;
-        this.material = material;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -27,19 +29,19 @@ public class Pcb {
         this.name = name;
     }
 
-    public String getColor() {
-        return color;
+    public boolean isHotswap() {
+        return hotswap;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setHotswap(boolean hotswap) {
+        this.hotswap = hotswap;
     }
 
-    public String getMaterial() {
-        return material;
+    public Integer getSize() {
+        return size;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setSize(Integer size) {
+        this.size = size;
     }
 }
