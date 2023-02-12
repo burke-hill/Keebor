@@ -32,7 +32,7 @@ public class KeyboardService {
         testKeeb.setKeycapChoice(keycapsService.findKeycaps("Test Keycaps"));
         testKeeb.setPcbChoice(pcbService.findPcb("Test Pcb"));
         testKeeb.setSwitchChoice(switchService.findSwitch("Test Switch"));
-        testKeeb.setUsername("Test User");
+        testKeeb.setBuildname("Testerton");
         keyboardRepository.save(testKeeb);
     }
 
@@ -42,12 +42,14 @@ public class KeyboardService {
     }
 
 
-
-    /*public Keyboard buildKeyboard()
+    public Keyboard getKeyboard(String buildname)
     {
-        Keyboard ret = new Keyboard();
-        ret.setCaseChoice(caseService.findCase("Test Case"));
-        return ret;
-    }*/
+        return keyboardRepository.findByBuildname(buildname);
+    }
 
+    // todo - Create logic to verify keyboard build dimensions
+    public boolean verifyBuild(Keyboard keyboard)
+    {
+       return false;
+    }
 }

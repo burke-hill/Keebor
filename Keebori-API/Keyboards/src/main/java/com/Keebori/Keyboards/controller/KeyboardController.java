@@ -5,10 +5,7 @@ import com.Keebori.Keyboards.model.Keyboard;
 import com.Keebori.Keyboards.service.CaseService;
 import com.Keebori.Keyboards.service.KeyboardService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
@@ -38,4 +35,11 @@ public class KeyboardController
     {
         return keyboardService.findAllKeyboards();
     }
+
+    @GetMapping(path="/{buildname}")
+    public @ResponseBody Keyboard getKeyboard(@PathVariable("buildname") String buildname)
+    {
+        return keyboardService.getKeyboard(buildname);
+    }
+
 }

@@ -23,15 +23,14 @@ public class Keyboard {
     @ManyToOne
     private Keycaps keycapChoice;
 
-    @Column(unique=true)
-    private String Username;
+    private String buildname;
 
-    public String getUsername() {
-        return Username;
+    public String getBuildname() {
+        return buildname;
     }
 
-    public void setUsername(String username) {
-        Username = username;
+    public void setBuildname(String buildname) {
+        this.buildname = buildname;
     }
 
     public Long getId() {
