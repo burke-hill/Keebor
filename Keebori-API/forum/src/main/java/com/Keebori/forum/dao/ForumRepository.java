@@ -5,4 +5,5 @@ import jakarta.persistence.Id;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ForumRepository extends CrudRepository<ForumEntry, Id> {
+    ForumEntry findByTitle(String title);
 }

@@ -29,6 +29,17 @@ public class ForumService {
         return forumRepository.findAll();
     }
 
+    public void addKeyboardTest()
+    {
+        ForumEntry newEntry = new ForumEntry();
+        newEntry.setDate(LocalDate.now());
+        newEntry.setTitle("Test Title");
+        newEntry.setContent("HEY THERE");
+        newEntry.setAssociatedKeyboard(keyboardService.getKeyboard("Test Build"));
+        forumRepository.save(newEntry);
+    }
+
+
 
 
 }

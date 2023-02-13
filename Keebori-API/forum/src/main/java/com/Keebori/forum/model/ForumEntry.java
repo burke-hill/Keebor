@@ -17,6 +17,8 @@ public class ForumEntry {
     private String title;
     private LocalDate date;
     private String content;
+
+    @OneToOne
     private Keyboard associatedKeyboard;
 
     public Long getId() {
