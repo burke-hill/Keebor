@@ -33,6 +33,12 @@ public class ForumController {
         forumService.addKeyboardTest();
     }
 
+    @PostMapping(path="")
+    public ForumEntry newEntry(@RequestBody ForumEntry entry)
+    {
+        return forumService.saveNewEntry(entry);
+    }
+
 
 
 }

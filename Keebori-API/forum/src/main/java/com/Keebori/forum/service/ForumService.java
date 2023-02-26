@@ -34,12 +34,15 @@ public class ForumService {
         ForumEntry newEntry = new ForumEntry();
         newEntry.setDate(LocalDate.now());
         newEntry.setTitle("Test Title");
-        newEntry.setContent("HEY THERE");
+        newEntry.setContent("HEY THERE HEY THEREHEY THEREHEY THEREHEY THEREHEY THEREHEY THEREHEY THEREHEY THEREHEY THEREHEY THERE");
         newEntry.setAssociatedKeyboard(keyboardService.getKeyboard("Test Build"));
         forumRepository.save(newEntry);
     }
 
-
+    public ForumEntry saveNewEntry(ForumEntry entry)
+    {
+        return forumRepository.save(entry);
+    }
 
 
 }
